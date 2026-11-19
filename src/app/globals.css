@@ -1,0 +1,56 @@
+@import "tailwindcss";
+
+:root {
+  --background: #f8fafc;
+  --foreground: #0f172a;
+  --saude-azul: #0f4c81;
+  --saude-verde: #10b981;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+html.large-font {
+  font-size: 118.75%;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+/* Modo Alto Contraste voltado para acessibilidade (Idosos / Baixa Visão) */
+html.high-contrast body {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+html.high-contrast .hc-surface {
+  background-color: #0a0a0a !important;
+  color: #ffffff !important;
+  border-color: #facc15 !important;
+  border-width: 2px !important;
+}
+
+html.high-contrast .hc-card {
+  background-color: #111111 !important;
+  color: #ffffff !important;
+  border-color: #facc15 !important;
+  border-width: 2px !important;
+}
+
+html.high-contrast .hc-muted {
+  color: #fde047 !important;
+}
+
+html.high-contrast input,
+html.high-contrast select {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+  border-color: #facc15 !important;
+}
